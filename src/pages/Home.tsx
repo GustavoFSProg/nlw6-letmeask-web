@@ -1,6 +1,7 @@
 import Illustration from '../assets/images/illustration.svg'
 import logoImg from '../assets/images/logo.svg'
 import googleIcon from '../assets/images/google-icon.svg'
+import '../styles/global.scss'
 
 function Home() {
   return (
