@@ -1,5 +1,8 @@
 import React from 'react'
 
 export function Button() {
-  return <h1>Botão</h1>
+  return
+  ;<div>
+    <h1>Botão</h1>
+  </div>
 }
