@@ -1,7 +1,11 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import Home from './pages/Home'
 
 export default function Routes() {
-  return <Route path="/" exact component={Home} />
+  return (
+    <BrowserRouter>
+      <Route path="/" component={Home} />
+    </BrowserRouter>
+  )
 }
