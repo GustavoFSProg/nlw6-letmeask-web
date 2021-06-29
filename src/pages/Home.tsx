@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useContext } from 'react'
+import React, { FormEvent, useContext, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 import Illustration from '../assets/images/illustration.svg'
@@ -10,10 +10,12 @@ import '../styles/auth.scss'
 import { Button } from '../components/Button'
 
 import { AuthContext } from '../Contexts/AuthContext'
+import { database } from '../services/firebase'
 
 function Home() {
   const { user, signInWithGoogle } = useContext(AuthContext)
   const history = useHistory()
+  const [roomCode, setRoomCode] = useState('')
 
   async function handleCreateRoom() {
     if (!user) {
@@ -24,6 +26,22 @@ function Home() {
 
   function handleClick() {
     history.push('/new-room')
+  }
+
+  async function handleJoinRoom(event: FormEvent) {
+    event.preventDefault()
+
+    if (roomCode.trim() === '') {
+      return
+    }
+
+    const roomRef = await database.ref(`rooms/${roomCode}`).get()
+
+    if (!roomRef.exists()) {
+      return alert('Room not exists.')
+    }
+
+    history.push(`rooms/${roomCode}`)
   }
 
   return (
@@ -43,8 +61,13 @@ function Home() {
           </button>
           <div className="separator">ou entre em uma sala</div>
 
-          <form>
-            <input type="text" placeholder="Digite o Códio da Sala" />
+          <form onSubmit={handleJoinRoom}>
+            <input
+              type="text"
+              placeholder="Digite o Códio da Sala"
+              onChange={(event) => setRoomCode(event.target.value)}
+              value={roomCode}
+            />
             <Button type="submit">Entrar na Sala</Button>
           </form>
         </div>
