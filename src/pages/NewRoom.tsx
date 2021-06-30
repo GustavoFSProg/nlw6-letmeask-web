@@ -44,7 +44,6 @@ function NewRoom() {
       <main>
         <div className="main-content">
           <img src={logoImg} alt="letmeAsk" />
-          <h1>{user?.name}</h1>
 
           <p>Criar uma nova Sala</p>
           <form onSubmit={handleCreateRoom}>

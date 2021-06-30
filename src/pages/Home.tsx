@@ -51,7 +51,6 @@ function Home() {
         <strong>Crie salas de Q&amp;A ao vivo</strong>
         <p>Tire as dúvidas da sua audiência em tempo real</p>
       </aside>
-      <h1>{user?.name}</h1>
       <main>
         <div className="main-content">
           <img src={logoImg} alt="letmeAsk" />
