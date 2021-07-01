@@ -4,6 +4,7 @@ import NewRoom from './pages/NewRoom'
 import Room from './pages/Room'
 
 import { AuthContextProvider } from './Contexts/AuthContext'
+import AdminRoom from './pages/AdminRoom'
 
 export default function Routes() {
   return (
@@ -13,6 +14,7 @@ export default function Routes() {
           <Route path="/" exact component={Home} />
           <Route path="/new-room" component={NewRoom} />
           <Route path="/rooms/:id" component={Room} />
+          <Route path="/admin/rooms/:id" component={AdminRoom} />
         </AuthContextProvider>
       </Switch>
     </BrowserRouter>

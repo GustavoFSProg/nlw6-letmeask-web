@@ -17,6 +17,32 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 24px;
+
+    button {
+      border: 0;
+      border: transparent;
+      cursor: pointer;
+      transition: filter(0.2);
+
+      &.like-button {
+        display: flex;
+        align-items: flex-end;
+        color: #737380;
+        gap: 8px;
+
+        &.liked {
+          color: #8354fd;
+
+          svg path {
+            stroke: #8354fd;
+          }
+        }
+      }
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
   }
 
   .user-info {
