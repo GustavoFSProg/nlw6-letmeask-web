@@ -50,7 +50,7 @@ function NewRoom() {
             <input
               type="text"
               onChange={(event) => setNewRoom(event.target.value)}
-              placeholder="Digite o Códio da Sala"
+              placeholder="Digite o Nome da Sala"
               value={newRoom}
             />
             <Button type="submit">Criar Sala</Button>
