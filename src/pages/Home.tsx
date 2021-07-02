@@ -60,7 +60,7 @@ function Home() {
       <main>
         <div className="main-content">
           <img src={logoImg} alt="letmeAsk" />
-          <button onClick={handleCreateRoom} className="create-room">
+          <button onClick={() => handleCreateRoom()} className="create-room">
             <img src={googleIcon} alt="google-icon" />
             Crie sua sala com o Google
           </button>
