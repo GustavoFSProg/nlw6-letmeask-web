@@ -99,7 +99,6 @@ function AdminRoom() {
           <h1>Sala {title}</h1>
           {questions.length > 0 && <span>{questions.length} perguntas</span>}
         </div>
-        {console.log(questions)}
 
         <div className="question-list">
           {questions.map((item) => {
