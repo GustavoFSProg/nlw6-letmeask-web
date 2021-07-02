@@ -1,8 +1,8 @@
-## nlw6-letmeask-web
+#### nlw6-letmeask-web
 
-#This Course is to create a app of Rooms and messages chats from the NLW-6  of Rocketseat
+## This Course is to create a app of Rooms and messages chats from the NLW-6  of Rocketseat
 
-#Tools
+## Tools
 This project uses:
 - React js, 
 - Typescript,
