@@ -2,7 +2,7 @@
 
 ## This Course is to create a app of Rooms and messages chats from the NLW-6  of Rocketseat
 
-# Tools
+#### Tools
 This project uses:
 - React js, 
 - Typescript,
@@ -11,6 +11,6 @@ This project uses:
 
 <img src="/home-git.png" alt="My cool logo"/>
 
-### URL:
+#### URL:
   https://letmeask-course.netlify.app/
 
