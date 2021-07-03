@@ -71,6 +71,15 @@
       }
     }
 
+    .room-title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .room-title h1 {
+      margin-bottom: 23px;
+    }
+
     form {
       textarea {
         width: 100%;
