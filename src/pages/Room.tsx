@@ -59,12 +59,14 @@ function Room() {
   return (
     <div id="page-room">
       <header>
-        <Link to={`/admin/rooms/${roomId}`}>
-          <div className="content">
+        <div className="content">
+          <Link to={`/`}>
             <img src={LogoImg} alt="logo-img" />
+          </Link>
+          <Link to={`/admin/rooms/${roomId}`}>
             <RoomCode code={roomId} />
-          </div>
-        </Link>
+          </Link>
+        </div>
       </header>
       <main className="content">
         <div className="room-title">

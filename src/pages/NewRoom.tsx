@@ -9,6 +9,7 @@ import { Button } from '../components/Button'
 import { AuthContext } from '../Contexts/AuthContext'
 import { database } from '../services/firebase'
 import { useHistory } from 'react-router'
+import { Link } from 'react-router-dom'
 
 function NewRoom() {
   const [newRoom, setNewRoom] = useState('')
@@ -43,7 +44,9 @@ function NewRoom() {
       </aside>
       <main>
         <div className="main-content">
-          <img src={logoImg} alt="letmeAsk" />
+          <Link to="/">
+            <img src={logoImg} alt="letmeAsk" />
+          </Link>
 
           <p>Criar uma nova Sala</p>
           <form onSubmit={handleCreateRoom}>
