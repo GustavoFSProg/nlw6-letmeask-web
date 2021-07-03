@@ -86,15 +86,16 @@ function AdminRoom() {
           <Link to="/">
             <img src={LogoImg} alt="logo-img" />
           </Link>
-          <div>
-            <Link to={`/rooms/${roomId}`}>
-              <RoomCode code={roomId} />
-            </Link>
-            <Button onClick={() => handleEndRoom()} isOutlined style={{ width: '40%' }}>
-              Encerrar a sala
-            </Button>
-          </div>
         </div>
+        <br />
+        <br />
+        <Link to={`/rooms/${roomId}`}>
+          <RoomCode code={roomId} />
+        </Link>
+
+        <Button onClick={() => handleEndRoom()} isOutlined>
+          Encerrar a sala
+        </Button>
       </header>
       <main className="content">
         <div className="room-title">

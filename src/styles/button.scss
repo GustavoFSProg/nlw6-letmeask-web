@@ -4,7 +4,7 @@
   font-weight: 500;
   background: #835afd;
   color: #fff;
-  width: 100%;
+  width: 25%;
   padding: 0 32px;
 
   display: flex;
@@ -32,5 +32,12 @@
   &:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .button {
+    width: 66%;
+    margin-top: 70px;
   }
 }

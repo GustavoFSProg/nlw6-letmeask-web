@@ -3,6 +3,19 @@
     padding: 24px;
     border-bottom: 1px solid #e2e2e2;
 
+    @media screen and (max-width: 600px) {
+      #page-room {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .header-container {
+        width: 80%;
+      }
+    }
+
     .content {
       max-width: 1120px;
       margin: 0 auto;
@@ -112,6 +125,29 @@
           }
         }
       }
+      .header-container {
+        width: 180%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .content {
+      display: flex;
+      flex-direction: column;
+      textarea {
+        width: 93%;
+        margin-left: 10px;
+      }
+    }
+
+    .form-footer {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .room-title h1 {
+      margin-left: 30px;
     }
   }
 }

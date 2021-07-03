@@ -60,7 +60,7 @@ function Room() {
     <div id="page-room">
       <header>
         <div className="content">
-          <Link to={`/`}>
+          <Link to={`/`} style={{ marginBottom: '12px' }}>
             <img src={LogoImg} alt="logo-img" />
           </Link>
           <Link to={`/admin/rooms/${roomId}`}>
@@ -92,7 +92,7 @@ function Room() {
                 Para enviar uma pergunta,<button>faça seu login.!</button>
               </span>
             )}
-            <Button disabled={!user} style={{ width: '25%' }} type="submit">
+            <Button disabled={!user} type="submit">
               Enviar pergunta
             </Button>
           </div>
